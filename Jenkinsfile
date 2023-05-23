@@ -4,6 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh "echo Building code....."
+                sh "echo whoami"
                // sh "echo 'sampling' > /home/jenkins_home/abccsa123.txt"
             }
         }

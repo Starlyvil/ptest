@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    stages(){
+    stages('my-stage'){
         stage('Build') {
             steps {
                 sh "echo Building code....."
@@ -9,7 +9,7 @@ pipeline {
             }
         }
         stage('Test') {
-            steps {
+            steps (){
                 sh "echo 'Testing code.....'"
             }
         }

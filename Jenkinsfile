@@ -3,7 +3,7 @@ pipeline {
     stages('my-stage'){
         stage('Build') {
             steps {
-                withCredentials([usernamePassword(credentials: 'test-credential', usernameVariable: UN, passwordVariable: PW)]){
+                withCredentials([usernamePassword(credentials: 'test-credential', usernameVariable: 'UN', passwordVariable: 'PW')]){
                     echo "my user name is ${UN} and my password is ${PW}"
                 }
                 sh "echo Building code....."

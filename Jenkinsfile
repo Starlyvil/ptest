@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-               withCredentials([usernamePassword(credentialsId: 'test-credential', usernameVariable: 'UN', passwordVariable: 'PW')]){
+               withCredentials(binding: [usernamePassword(credentialsId: 'test-credential', usernameVariable: 'UN', passwordVariable: 'PW')]){
                    echo "my user name is ${UN} and my password is ${PW}"
                }
                 sh "echo Building code....."

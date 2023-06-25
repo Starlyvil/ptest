@@ -6,10 +6,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-              // withCredentials(bindings: [usernamePassword(credentialsId: 'test-credential', usernameVariable: 'UN', passwordVariable: 'PW')]){
-                  // echo "my user name is ${UN} and my password is ${PW}"
-              // }
-                RR = credentials("test-credential")
+                withCredentials(bindings: [usernamePassword(credentialsId: 'test-credential', usernameVariable: 'UN', passwordVariable: 'PW'), sshUserPrivateKey(credentialsId: 'global_key',
+                      keyFileVariable: 'SSH_KEY_FOR_ABC',
+                      passphraseVariable: '',
+                      usernameVariable: ''),]){
+                    echo "my user name is ${UN} and my password is ${PW} and path to pk => ${SSH_KEY_FOR_ABC}"
+                }
                 sh "echo Building code..... ${AA_USR} and password ${AA_PSW}"
                 //sh "whoami"
                // sh "echo 'sampling' > /home/jenkins_home/abccsa123.txt"

@@ -8,7 +8,6 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'test-credential', usernameVariable: 'UN', passwordVariable: 'PW'), sshUserPrivateKey(credentialsId: 'global_key',
                       keyFileVariable: 'SSH_KEY_FOR_ABC',
-                      passphraseVariable: '',
                       usernameVariable: '')]){
                     echo "my user name is ${UN} and my password is ${PW} and path to pk => ${SSH_KEY_FOR_ABC}"
                 }

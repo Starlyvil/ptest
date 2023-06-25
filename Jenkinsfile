@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                withCredentials(bindings: [usernamePassword(credentialsId: 'test-credential', usernameVariable: 'UN', passwordVariable: 'PW'), sshUserPrivateKey(credentialsId: 'global_key',
+                withCredentials([usernamePassword(credentialsId: 'test-credential', usernameVariable: 'UN', passwordVariable: 'PW'), sshUserPrivateKey(credentialsId: 'global_key',
                       keyFileVariable: 'SSH_KEY_FOR_ABC',
                       passphraseVariable: '',
                       usernameVariable: ''),]){

@@ -7,6 +7,7 @@ pipeline {
        // string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
          string(name: 'PERSON', description: 'Who should I say hello to?')
          choice(name: 'severity', choices: ['A', 'B', 3], description: '')
+         booleanParam(name: 'Clear Cache', defaultValue: '', description: '')
      }
     stages {
         stage('Build') {

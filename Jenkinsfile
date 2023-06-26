@@ -6,7 +6,7 @@ pipeline {
      parameters {
        // string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
          string(name: 'PERSON', description: 'Who should I say hello to?')
-         choice(name: 'severity', choices: ['A', 'B', 3], description: ‘’)
+         choice(name: 'severity', choices: ['A', 'B', 3], description: '')
      }
     stages {
         stage('Build') {

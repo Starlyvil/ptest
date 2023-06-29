@@ -1,3 +1,4 @@
+def tt
 pipeline {
     agent any
     environment {

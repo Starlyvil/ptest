@@ -18,6 +18,11 @@ pipeline {
                       usernameVariable: '')]){
                     echo "my user name is ${UN} and my password is ${PW} and path to pk => ${SSH_KEY_FOR_ABC}"
                 }
+
+                script {
+                    tt = load "src/test.groovy"
+                    
+                }
                 sh "echo Building code..... ${AA_USR} and password ${AA_PSW}"
                 //sh "whoami"
                // sh "echo 'sampling' > /home/jenkins_home/abccsa123.txt"

@@ -32,6 +32,9 @@ pipeline {
         stage('Test') {
             steps (){
                 sh "echo 'Testing code.....'"
+                script{
+                    tt.give()
+                }
             }
         }
     }

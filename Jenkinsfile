@@ -1,4 +1,7 @@
 def tt
+sample(){
+    echo 'Hii.....'
+}
 pipeline {
     agent any
     environment {
@@ -34,6 +37,7 @@ pipeline {
                 sh "echo 'Testing code.....'"
                 script{
                     tt.give()
+                    sample()
                 }
             }
         }

@@ -25,6 +25,9 @@ pipeline {
 
                 script {
                     tt = load "src/test.groovy"
+                    def tt2 = load "src/test2.groovy"
+
+                    tt2.hi()
                     
                 }
                 sh "echo Building code..... ${AA_USR} and password ${AA_PSW}"

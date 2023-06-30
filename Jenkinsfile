@@ -1,7 +1,7 @@
 def tt
-sample(){
-    echo 'Hii.....'
-}
+// sample(){
+//     echo 'Hii.....'
+// }
 pipeline {
     agent any
     environment {

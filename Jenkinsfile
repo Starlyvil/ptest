@@ -44,8 +44,11 @@ pipeline {
                 }
             }
             input {
-                message "Testingg..."
-                ok "just Press"
+                message "Select environment"
+                ok "Continue with selection"
+                parameters {
+                    choice(name: 'Environment', choices: ['Staging', 'Testing', 'Production'], description: ‘’)
+                }
             
             }
         }

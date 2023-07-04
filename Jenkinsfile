@@ -45,7 +45,7 @@ pipeline {
             }
             input {
                 message "Testingg..."
-                Ok "just Press"
+                ok "just Press"
             
             }
         }

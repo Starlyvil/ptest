@@ -35,20 +35,21 @@ pipeline {
                // sh "echo 'sampling' > /home/jenkins_home/abccsa123.txt"
             }
         }
-    stage('Test') {
-        input {
-            message 'Select environment'
-            ok 'Continue with selection'
-            parameters {
-                choice(name: 'Environment', choices: ['Staging', 'Testing', 'Production'], description: '')
-            }
+        stage('Test') {
+    input {
+        message 'Select environment'
+        ok 'Continue with selection'
+        parameters {
+            choice(name: 'Environment', choices: ['Staging', 'Testing', 'Production'], description: '')
         }
-        steps {
-            sh "echo 'Testing code.....'"
-            script {
-                tt.give()
-                sample()
-            }
+    }
+    steps {
+        sh "echo 'Testing code.....'"
+        script {
+            tt.give()
+            sample()
         }
+    }
+}
     }
 }

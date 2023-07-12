@@ -1,6 +1,6 @@
 def tt
 def sample(){
-    echo 'Hii.....============='
+    echo 'Hii.....===+++++++===='
 }
 pipeline {
     agent any
